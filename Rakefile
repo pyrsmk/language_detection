@@ -9,7 +9,7 @@ task :compile do
 
   if !File.exist?(path) || ENV['RECOMPILE']
     puts "Compiling extension..."
-    `cd #{File.expand_path("ext/cld/")} && make`
+    `cd #{File.expand_path("ext/cld/")} && CPPFLAGS="-std=c++98" make`
   else
     puts "Extension already compiled. To recompile set env variable RECOMPILE=true."
   end
