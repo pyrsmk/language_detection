@@ -24,7 +24,6 @@ Gem::Specification.new do |gem|
 
   gem.add_runtime_dependency "ffi", "~> 1.15"
 
-  gem.add_development_dependency "rake", "~> 13"
   gem.add_development_dependency "shoulda", "~> 4"
   gem.add_development_dependency "mocha", "~> 2"
   gem.add_development_dependency "test-unit", "~> 3"
