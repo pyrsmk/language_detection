@@ -1,6 +1,11 @@
-# TODO: Generate Makefile
+OS := $(shell uname -s)
+
+ifeq ($(OS),Darwin)
+    MAKE := arch -x86_64 make
+endif
 
 CFLAGS=-fPIC -I. -O2 -DCLD_WINDOWS -ansi
+CPPFLAGS=-std=c++98
 LDFLAGS=-L.
 CC=g++
 AR=ar
